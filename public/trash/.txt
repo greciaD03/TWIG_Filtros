@@ -1,0 +1,8 @@
+// https://diego.com.es/filtros-en-twig#:~:text=Los%20filtros%20permiten%20especificar%20la,en%20una%20aplicaci%C3%B3n%20con%20Twig&text=Las%20variables%20en%20Twig%20pueden,tener%20tambi%C3%A9n%20argumentos%20en%20par%C3%A9ntesis.
+
+//https://www.youtube.com/watch?v=vL1MedR0iXc
+//https://twig.symfony.com/doc/3.x/filters/index.html
+//https://twig.symfony.com/doc/2.x/templates.html
+//https://diego.com.es/filtros-en-twig#:~:text=Los%20filtros%20permiten%20especificar%20la,en%20una%20aplicaci%C3%B3n%20con%20Twig&text=Las%20variables%20en%20Twig%20pueden,tener%20tambi%C3%A9n%20argumentos%20en%20par%C3%A9ntesis.
+//https://symfony.com/doc/current/reference/twig_reference.html
+//https://symfony.com/doc/current/templates.html#templates-twig-extension

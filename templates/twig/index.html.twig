@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TWIG!{% endblock %}
+
+{% block body %}
+<style>
+  div{
+    border: rgb(0, 0, 0) 5px solid;
+  }
+
+  h2{
+    color: red;
+    background-color: rgb(253, 181, 176);
+  }
+  p{
+    background-color: rgb(147, 176, 176);
+  }
+
+  a{
+    color:blueviolet; 
+  }
+
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<twig class="example-wrapper">
+    <img
+  src="https://i.pinimg.com/564x/46/cc/aa/46ccaada03bdeddc3dadc0afe0ddce3c.jpg"
+  alt="🍜" width="100" height="100" align="right"/>
+  
+    <h1>║Hello {{ controller_name }}! ☑️║</h1>
+
+    <p1><a href="/page" class="boton">🟪[Regresar ↩] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p1>
+    <p1><a href="/practica" class="boton">🟪[Practica 2 ➡]</a></p1>
+<div>
+  <p>Por ejemplo el filtro striptags elimina las etiquetas HTML de la variable name y el filtro title hace mayúscula la primera letra de cada palabra:</p>
+  {{dump(etiquetas)}}
+</div>
+
+<div>
+  <h2>PRACTICA 1.-</h2>
+  <p>» Ordena [0 - 6] la lista de numeros:</p>
+  {{dump(lista1)}}
+  {% set numbers = [5, 2, 6, 23, 8, 3, 8] %}
+
+  {% for k,v in numbers %}
+    || {{ k }} - {{ v }} || █
+  {% endfor %}  
+</div>
+  <!--ESPACIO-->
+<div>
+  <p>» Ordena [0 - 6] la lista de numeros, con la condicion de ser iguales/mayores a 5:</p>
+  {{dump(lista2)}}
+  {% set num = [8, 15, 2, 7, 4, 12, 5]%}
+
+  {% for y,z in num|filter((z,y) => z >=5) %}
+    || {{ y }} - {{ z }} || █
+  {% endfor %}
+</div>
+
+<div>
+  <p>» Sumar todos los numeros de la lista:</p>
+  {% set list_num = [5, 2, 6, 2, 6, 23, 8, 3, 8] %}
+  {{ list_num|reduce((carry, v) => carry + v) }}
+</div>
+</twig>
+  {% endblock %}

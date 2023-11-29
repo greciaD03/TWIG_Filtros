@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PracticaController!{% endblock %}
+
+{% block body %}
+<style>
+    div{
+    border: rgb(0, 0, 0) 5px solid;
+  }
+
+  h2{
+    color: red;
+    background-color: rgb(253, 181, 176);
+  }
+  p{
+    background-color: rgb(147, 176, 176);
+  }
+
+  a{
+    color:blueviolet; 
+  }
+
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<twig class="example-wrapper">
+    <img
+  src="https://i.pinimg.com/564x/d1/db/b3/d1dbb3a9a2169853f634199727b14301.jpg"
+  alt="🍜" width="100" height="100" align="right"/>
+
+    <h1>║Hello {{ controller_name }}! ☑️║</h1>
+
+    <p1><a href="/twig" class="boton">🟪[Regresar ↩] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p1>
+    <p1><a href="/page" class="boton">🟪[HOME] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p1>
+    <!--<p1><a href="/practica" class="boton">🟪[Practica 2 ➡]</a></p1>-->
+
+<div>
+    <p>» Imprime el numero:</p>
+  {% set number = 5 %}
+  {{ number|abs }}
+  {{dump(num)}}
+</div>
+
+<div>
+    <p>» Imprime la lista:</p>
+  {% set items = ['¡Hola', 'Mundo', '!', '😄'] %}
+  <table>
+    {% for row in items|batch(3, '💥') %}
+     <tr>
+        {% for column in row %}
+          <td>{{ column }}</td>
+        {% endfor %}
+     </tr>
+    {% endfor %}
+  </table>
+  {{dump(text)}}
+  {{dump(forma)}}
+</div>
+
+<div>
+    <p>» 1er caracter MAYUSCULAS:</p>
+  {{ 'wELCOME!'|capitalize }}
+  {{dump(word)}} 
+</div>
+
+<div>
+    <p>» ..:</p>
+    {% set ite = [{ 'fruta' : 'manzana'}, {'fruta' : 'naranja' }] %}
+    {% set frutas = ite|column('fruta') %}
+</div>
+
+<div>
+
+</div>
+
+</twig>
+{% endblock %}
